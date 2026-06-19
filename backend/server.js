@@ -14,16 +14,29 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Support multiple CORS origins (comma-separated in env)
-const allowedOrigins = process.env.CORS_ORIGIN
+// Always include the production Vercel frontend as a fallback
+const PRODUCTION_ORIGINS = [
+  'https://sort-my-scene-ashen.vercel.app',
+  'http://localhost:5173',
+];
+
+const envOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(',').map(o => o.trim())
-  : ['http://localhost:5173'];
+  : [];
+
+const allowedOrigins = Array.from(new Set([...PRODUCTION_ORIGINS, ...envOrigins]));
+
+console.log('Allowed CORS origins:', allowedOrigins);
 
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    // Allow server-to-server requests (no origin header)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      console.warn(`CORS blocked origin: ${origin}`);
+      callback(null, false);
     }
   },
   credentials: true,
