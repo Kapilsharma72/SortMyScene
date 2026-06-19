@@ -1,0 +1,70 @@
+.empty {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 24px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+}
+
+.summary {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.seats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.seatTag {
+  background: var(--accent-dim);
+  color: var(--accent-light);
+  border: 1px solid var(--accent);
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.totalAmount {
+  font-size: 1.3rem;
+  color: var(--accent-light);
+}

@@ -1,0 +1,59 @@
+.page {
+  padding: 40px 0 80px;
+}
+
+.header {
+  margin-bottom: 36px;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #fff 0%, var(--accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.sub {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skeletonCard {
+  height: 220px;
+  border-radius: var(--radius-lg);
+}
+
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.errorText {
+  color: var(--danger);
+  font-size: 1rem;
+}
+
+.emptyText {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .heading { font-size: 1.6rem; }
+  .grid { grid-template-columns: 1fr; }
+}

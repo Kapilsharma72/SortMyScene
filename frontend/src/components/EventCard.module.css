@@ -1,0 +1,91 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-dim) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.price {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-light);
+}
+
+.cta {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}

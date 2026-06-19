@@ -1,0 +1,39 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--warning-dim);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-md);
+  transition: all 0.5s ease;
+}
+
+.urgent {
+  background: var(--danger-dim);
+  border-color: var(--danger);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: 0 0 16px rgba(239, 68, 68, 0.35); }
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.clock {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--warning);
+  letter-spacing: -0.02em;
+}
+
+.urgent .clock {
+  color: var(--danger);
+}

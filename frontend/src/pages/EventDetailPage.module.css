@@ -1,0 +1,212 @@
+.page {
+  padding: 32px 0 80px;
+}
+
+.back {
+  display: inline-block;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  transition: color var(--transition);
+}
+.back:hover { color: var(--text-primary); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ─── Event header ─────────────────────────────────────────────────────── */
+.eventHeader {
+  margin-bottom: 28px;
+}
+
+.eventName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.eventMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.price {
+  color: var(--accent-light);
+  font-weight: 700;
+}
+
+.description {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 12px 0;
+  max-width: 600px;
+}
+
+.seatStats {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+/* ─── Timer row ────────────────────────────────────────────────────────── */
+.timerRow {
+  margin-bottom: 20px;
+}
+
+/* ─── Sidebar ──────────────────────────────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.loginPrompt {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.loginPrompt a {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+/* ─── Loading skeletons ────────────────────────────────────────────────── */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skeletonTitle {
+  height: 120px;
+  border-radius: var(--radius-lg);
+}
+
+.skeletonGrid {
+  height: 320px;
+  border-radius: var(--radius-lg);
+}
+
+/* ─── Center state (error) ─────────────────────────────────────────────── */
+.centerState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* ─── Success card ─────────────────────────────────────────────────────── */
+.successCard {
+  max-width: 480px;
+  margin: 60px auto;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  box-shadow: var(--shadow-elevated);
+}
+
+.successIcon {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.successTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.successSub {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.refBox {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  width: 100%;
+}
+
+.successSeats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+}
+
+.refLabel {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.refCode {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent-light);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+
+.seatTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.seatTag {
+  background: var(--success-dim);
+  color: var(--success);
+  border: 1px solid var(--success);
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* ─── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventName { font-size: 1.4rem; }
+  .successCard { padding: 32px 20px; }
+}

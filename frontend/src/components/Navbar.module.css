@@ -1,0 +1,48 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13, 15, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  transition: opacity var(--transition);
+}
+.brand:hover { opacity: 0.8; }
+
+.brandAccent {
+  color: var(--accent);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.greeting {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .inner { padding: 0 16px; }
+  .greeting { display: none; }
+}
