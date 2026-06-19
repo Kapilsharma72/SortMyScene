@@ -2,7 +2,7 @@
 
 A full-stack event ticket booking system. Users browse events, pick seats on a visual grid, place a timed hold (10 minutes), and confirm their booking. Two users cannot end up with the same seat — the prevention is enforced at the database level, not just in application code.
 
-Live DEMO Link: https://sort-my-scene-ashen.vercel.app/events
+Live DEMO Link: https://sort-my-scene-ashen.vercel.app/
 
 ## Tech Stack
 
